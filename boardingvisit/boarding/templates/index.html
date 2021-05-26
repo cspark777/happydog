@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Content -->
+<section id="page-content">
+    <div class="container">
+        <!-- post content -->
+        <!-- Page title -->
+        <div class="page-title">
+            <h2>Boarding visit Calendar</h2>
+        </div>
+        <!-- end: Page title -->
+        <!-- Blog -->
+        <div id="visit_board" class="visit-body-content m-t-30" data-item="post-item">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Boarding visit date : </label>
+                        <div class="input-group" id="visit_daterangepicker">
+                            <input type="text" class="form-control" placeholder="Select date range" />
+                            <div class="input-group-append">
+                                <div class="input-group-text"><i class="icon-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-t-30" style="text-align: right;">
+                    <button type="button" id="generate_btn" class="btn btn-rounded">Generate visit data</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <table width="100%" id="visit_table">
+                            <thead>
+                                <tr>
+                                    <th width="14%">Sun</th>
+                                    <th width="14%">Mon</th>
+                                    <th width="14%">Tue</th>
+                                    <th width="14%">Wen</th>
+                                    <th width="14%">Thr</th>
+                                    <th width="14%">Fri</th>
+                                    <th width="14%">Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+        <!-- end: Blog -->        
+        
+    </div>
+    <!-- end: post content -->
+</section> <!-- end: Content -->
+
+<div class="modal fade" id="check_visit_date_modal" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">        
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="emm_title">Dog list in house at </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">                     
+                <table width="100%" id="visit_check_date_table">
+                    <thead>
+                        <tr>
+                            <th width="40%">Dog name</th>
+                            <th width="30%">From</th>
+                            <th width="30%">To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>                     
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-b" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- end: Modal -->
+{% endblock %}

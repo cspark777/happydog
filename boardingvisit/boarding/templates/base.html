@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="HappyDogs">
+    <link rel="icon" type="image/png" href="images/favicon.png">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>HappyDogs</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="{% static 'plugins/datatables/datatables.min.css' %}" rel='stylesheet' />
+    <link href="{% static 'plugins/daterangepicker/daterangepicker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Body Inner -->
+    <div class="body-inner">
+        <!-- Header -->
+        <header id="header" data-fullwidth="true">
+            <div class="header-inner">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="{% static 'images/logo.png' %}" style="display: block !important;">
+                        </a>
+                    </div>
+
+                    <!--End: Logo-->
+                    <div>
+                        <a href="/admin" style="float: right;"> -> go to admin </a>
+                    </div>
+                </div>
+            </div>
+        </header> <!-- end: Header -->
+        <!-- Content -->
+
+{% block content %}
+
+{% endblock %}
+
+<!-- Footer -->
+        <footer id="footer">
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">&copy; 2021 Aleksandr Rodin. All Rights Reserved.</div>
+                </div>
+            </div>
+        </footer>
+        <!-- end: Footer -->
+    </div>
+    <!-- end: Body Inner -->
+    <!-- Scroll top -->
+    <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+    <!--Plugins-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+    <script src="{% static 'plugins/datatables/datatables.min.js' %}"></script>
+    <script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+    <script src='{% static "plugins/jquery.blockUI.js" %}'></script>
+    <!--Template functions-->
+    <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
