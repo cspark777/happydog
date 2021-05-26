@@ -1,10 +1,10 @@
 (function($) {
   	"use strict"; // Start of use strict
 
-  	var server_url = "http://127.0.0.1:8000/";
+  	var server_url = "http://157.245.114.193/";
 
   	var start_at=""; 
-  	var end_at = "";
+  	var end_at = ""; 
 
   	//===========================================
   	function getGetDataFromAPI(url, callback){
